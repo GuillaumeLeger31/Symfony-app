@@ -1,0 +1,22 @@
+.question-content {
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.question-tag {
+  background-color:var(--gray);
+  color: white;
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semi-bold);
+  border-radius:var(--border-radius);
+  padding: 5px 10px;
+}
+
+.rating-up {
+  color: var(--success);
+}
+
+.rating-down {
+  color: var(--warning);
+}
+
+

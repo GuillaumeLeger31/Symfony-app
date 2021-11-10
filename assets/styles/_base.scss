@@ -1,0 +1,60 @@
+@use 'mixin' as *;
+
+.content {
+  max-width: var(--max-width);
+  &-main {
+    padding: 50px 0;
+    @include xs {
+      padding: 0 0 50px 0;
+    }
+  }
+}
+
+.separator {
+  border-bottom: 1px solid var(--gray-light);
+  margin: 30px 0px;
+}
+.app-content {
+  background-color: var(--gray-light);
+  padding: 20px;
+  @include xs {
+    padding: 10px;
+  }
+}
+
+.block {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: white;
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.block-shadow:hover {
+  cursor: pointer;
+  box-shadow: none;
+  transition: box-shadow 0.4s;
+}
+
+.avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+.avatar-lg {
+  width: 60px;
+  height: 60px;
+}
+
+.clickable {
+  font-weight: var(--font-weight-semi-bold);
+  cursor: pointer;
+}
+
+.text-small {
+  font-size: var(--font-size-small);
+}

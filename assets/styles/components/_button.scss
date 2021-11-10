@@ -1,0 +1,28 @@
+.btn {
+  border-radius: var(--border-radius);
+  padding: 7px 20px;
+  border: 0;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transition: opacity 0.4s;
+}
+
+.btn-small {
+  padding: 5px 15px;
+}
+
+.btn-primary {
+  background-color: var(--color);
+  color: white;
+  font-weight: 600;
+}
+
+.btn-primary-stroke {
+  border: var(--color);
+  color: var(--color);
+  font-weight: 600;
+}

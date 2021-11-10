@@ -1,0 +1,36 @@
+$questions = [
+            [
+                'id' => '1',
+                'title' => 'Je suis une première question',
+                'content' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                'rating' => 20,
+                'author' => [
+                    'name' => 'Guillaume Leger',
+                    'image' => 'https://www.logiquetechno.com/wp-content/uploads/2020/11/retirer-photo-de-profil-facebook.png',
+                ],
+                'nbrOfResponse' => 32,
+            ],
+            [
+                'id' => '2',
+                'title' => 'Je suis une deuxième question',
+                'content' => "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                'rating' => 0,
+                'author' => [
+                    'name' => 'Antoine Leger',
+                    'image' => 'https://www.logiquetechno.com/wp-content/uploads/2020/11/retirer-photo-de-profil-facebook.png',
+                ],
+                'nbrOfResponse' => 15,
+            ],
+            [
+                'id' => '3',
+                'title' => 'Je suis une troisième question',
+                'content' => " Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages.",
+                'rating' => -15,
+                'author' => [
+                    'name' => 'Pierre Leger',
+                    'image' => 'https://www.logiquetechno.com/wp-content/uploads/2020/11/retirer-photo-de-profil-facebook.png',
+                ],
+                'nbrOfResponse' => 17,
+            ]
+
+        ];
