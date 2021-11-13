@@ -50,12 +50,16 @@ class QuestionController extends AbstractController
   }
 
   #[Route('/question/delete/{id}', name: 'delete')]
+  #[IsGranted('IS_AUTHENTICATED_FULLY')]
     public function deleteQuestion(Question $question, EntityManagerInterface $em): Response
     {   
-        
+       $user = $this->getUser();
+       if ($user == $question->getAuthor()) {
         $em->remove($question);
         $em->flush();
         return $this->redirectToRoute('home');
+       }  
+       return $this->redirectToRoute('home');
     }
 
   #[Route('/question/{id}', name: 'question_show')]
