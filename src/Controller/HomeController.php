@@ -13,10 +13,14 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(QuestionRepository $questionRepo): Response
     {
+        $user = $this->getUser();
         $questions = $questionRepo->getQuestionsWithAuthors();
         return $this->render('home/index.html.twig', [
             'controller_name' => 'HomeController',
-            'questions' => $questions
+            'questions' => $questions,
+            'user' => $user
         ]);
+        
     }
+
 }

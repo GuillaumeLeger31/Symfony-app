@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use DateTime;
+use App\Entity\User;
 use App\Entity\Vote;
 use DateTimeImmutable;
 use App\Entity\Comment;
@@ -48,6 +49,14 @@ class QuestionController extends AbstractController
     ]);
   }
 
+  #[Route('/question/delete/{id}', name: 'delete')]
+    public function deleteQuestion(Question $question, EntityManagerInterface $em): Response
+    {   
+        
+        $em->remove($question);
+        $em->flush();
+        return $this->redirectToRoute('home');
+    }
 
   #[Route('/question/{id}', name: 'question_show')]
   public function show( Request $request, QuestionRepository $questionRepo, int $id, EntityManagerInterface $em): Response
