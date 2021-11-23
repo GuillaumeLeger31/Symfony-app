@@ -1,6 +1,7 @@
 # Création d'un réseau social avec Symfony & MySQL. 
 
 * Mise en production avec nginx sur un vps.
+* application--> https://guillaumeleger.fr
 
 ## prérequis
 
