@@ -5,6 +5,7 @@ namespace App\Entity;
 use App\Repository\QuestionRepository;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
+use Symfony\Component\Validator\Constraints as Assert;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -22,11 +23,15 @@ class Question
     /**
      * @ORM\Column(type="string", length=255)
      */
+    #[Assert\NotBlank(message: 'Veuillez renseigner un titre')]
+    #[Assert\Length(min: 20, minMessage: 'Veuillez détailler votre titre', max: 255, maxMessage: 'Le titre de votre question est trop long')]
     private $title;
 
     /**
      * @ORM\Column(type="text")
      */
+    #[Assert\NotBlank(message: 'Veuillez détailler votre question')]
+    #[Assert\Length(min: 100, minMessage: 'Veuillez détailler votre question')]
     private $content;
 
     /**
