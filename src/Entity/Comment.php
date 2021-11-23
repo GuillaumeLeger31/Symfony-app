@@ -24,7 +24,7 @@ class Comment
      * @ORM\Column(type="text")
      */
     #[Assert\NotBlank(message: 'Veuillez détailler votre réponse')]
-    #[Assert\Length(min: 100, minMessage: 'Votre réponse est trop courte')]
+    #[Assert\Length(min: 100, minMessage: 'Votre réponse est trop courte')] 
     private $content;
 
     /**
